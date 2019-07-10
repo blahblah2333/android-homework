@@ -8,6 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_weight="1"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -46,5 +47,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RadioButton" />
+
+    <Button
+        android:id="@+id/recyclerViewButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="RecyclerView"/>
+
 
 </LinearLayout>

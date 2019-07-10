@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.content.Intent;
+
+import com.example.helloworld.RecyclerViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,5 +26,14 @@ public class MainActivity extends AppCompatActivity {
                 textView2.setText("Hello world! What a wonderful world!");
             }
         });
+
+        Button myRecyclerViewButton = findViewById(R.id.recyclerViewButton);
+        myRecyclerViewButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent( MainActivity.this, RecyclerViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
