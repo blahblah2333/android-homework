@@ -319,7 +319,7 @@ public class Clock extends View {
         second = (second - 15 + 60) % 60;
         stopX = (int) (mCenterX + rEnd * Math.cos(Math.toRadians(second * 6)));
         stopY = (int) (mCenterY + rEnd * Math.sin(Math.toRadians(second * 6)));
-        paint.setStrokeWidth(mWidth * DEFAULT_NEEDLE_STROKE_WIDTH);
+        paint.setStrokeWidth(mWidth * DEFAULT_NEEDLE_STROKE_WIDTH * 0.8f);
         paint.setColor(secondsNeedleColor);
         canvas.drawLine(startX, startY, stopX, stopY, paint);
 
@@ -329,7 +329,7 @@ public class Clock extends View {
         minute = (minute - 15 + 60) % 60;
         stopX = (int) (mCenterX + rEnd * Math.cos(Math.toRadians(minute * 6)));
         stopY = (int) (mCenterY + rEnd * Math.sin(Math.toRadians(minute * 6)));
-        paint.setStrokeWidth(mWidth * DEFAULT_NEEDLE_STROKE_WIDTH * 2);
+        paint.setStrokeWidth(mWidth * DEFAULT_NEEDLE_STROKE_WIDTH * 1.5f);
         paint.setColor(minutesNeedleColor);
         canvas.drawLine(startX, startY, stopX, stopY, paint);
 
@@ -342,7 +342,7 @@ public class Clock extends View {
         hour = (hour - 3 + 12) % 12;
         stopX = (int) (mCenterX + rEnd * Math.cos(Math.toRadians(hour * 30)));
         stopY = (int) (mCenterY + rEnd * Math.sin(Math.toRadians(hour * 30)));
-        paint.setStrokeWidth(mWidth * DEFAULT_NEEDLE_STROKE_WIDTH * 2);
+        paint.setStrokeWidth(mWidth * DEFAULT_NEEDLE_STROKE_WIDTH * 1.8f);
         paint.setColor(hoursNeedleColor);
         canvas.drawLine(startX, startY, stopX, stopY, paint);
     }
